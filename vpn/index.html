@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Remote Access Setup | Angstrom Fiber Englewood</title>
+  <meta name="description" content="Install the Cloudflare One WARP client and connect to the af-englewood team for secure remote access.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script defer src="../assets/js/main.js"></script>
+</head>
+<body data-page="vpn">
+
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Angstrom Fiber Englewood home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>
+        <strong>Angstrom Fiber</strong>
+        <small>Englewood, Ohio</small>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" data-nav>
+      <a href="/">Home</a>
+      <a href="#quick-start">Quick Start</a>
+      <a href="#steps">Instructions</a>
+      <a href="#troubleshooting">Troubleshooting</a>
+      <a class="button button-small" href="https://one.one.one.one" target="_blank" rel="noopener noreferrer">Download WARP</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="section vpn-hero hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow eyebrow-light">Cloudflare One WARP</p>
+          <h1>Connect to the Angstrom Englewood network from off-site.</h1>
+          <p class="hero-text">Use this guide to install the Cloudflare One WARP client, sign in with your Angstrom email, and securely access approved internal resources.</p>
+          <div class="hero-actions">
+            <a class="button" href="https://one.one.one.one" target="_blank" rel="noopener noreferrer">Download WARP</a>
+            <button class="button button-outline" type="button" data-copy="af-englewood">Copy Team Name</button>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="status-row">
+            <span class="status-dot"></span>
+            <span>Team active</span>
+          </div>
+          <p class="eyebrow eyebrow-light" style="margin-top:18px">Team name</p>
+          <div class="copy-box">
+            <code>af-englewood</code>
+            <button type="button" data-copy="af-englewood">Copy</button>
+          </div>
+          <div class="check-list">
+            <span>Use your Angstrom email address</span>
+            <span>Check email for a one-time login code</span>
+            <span>No Cloudflare account required</span>
+            <span>WARP must show connected before accessing internal resources</span>
+          </div>
+        </aside>
+      </div>
+      <div class="hero-stripe" aria-hidden="true"></div>
+    </section>
+
+    <section id="quick-start" class="section section-soft">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">TL;DR</span>
+          <h2>Quick start</h2>
+          <p>Use this section if you already know your way around Windows apps.</p>
+        </div>
+        <div class="steps-grid compact">
+          <div class="step-card">
+            <span>1</span>
+            <p>Install the Cloudflare One / 1.1.1.1 WARP client.</p>
+          </div>
+          <div class="step-card">
+            <span>2</span>
+            <p>Open WARP and choose <strong>Login to Cloudflare Zero Trust</strong>.</p>
+          </div>
+          <div class="step-card">
+            <span>3</span>
+            <p>Enter team name <strong>af-englewood</strong>.</p>
+          </div>
+          <div class="step-card">
+            <span>4</span>
+            <p>Enter your Angstrom email and use the one-time login code.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="steps" class="section">
+      <div class="container guide-layout">
+        <div class="guide-sidebar">
+          <span class="eyebrow">Full instructions</span>
+          <h2>Step-by-step setup</h2>
+          <p>Written for non-technical users. Follow each step in order.</p>
+        </div>
+
+        <div class="guide-steps">
+          <article class="instruction">
+            <span>01</span>
+            <div>
+              <h3>Download the WARP client</h3>
+              <p>Go to the official Cloudflare download page and download the Windows version of the Cloudflare WARP client.</p>
+              <a class="text-link" href="https://one.one.one.one" target="_blank" rel="noopener noreferrer">Open download page ↗</a>
+            </div>
+          </article>
+          <article class="instruction">
+            <span>02</span>
+            <div>
+              <h3>Install the app</h3>
+              <p>Open the downloaded installer and follow the prompts. After installation, look for the orange Cloudflare icon near the clock in the bottom-right corner of Windows.</p>
+            </div>
+          </article>
+          <article class="instruction">
+            <span>03</span>
+            <div>
+              <h3>Open Cloudflare WARP</h3>
+              <p>Click the Cloudflare icon near the system clock. Open Settings or Preferences, go to Account, then choose <strong>Login to Cloudflare Zero Trust</strong>.</p>
+            </div>
+          </article>
+          <article class="instruction">
+            <span>04</span>
+            <div>
+              <h3>Enter the team name</h3>
+              <p>When asked for the team name, enter only the following:</p>
+              <div class="copy-box inline-copy">
+                <code>af-englewood</code>
+                <button type="button" data-copy="af-englewood">Copy</button>
+              </div>
+              <p>Do not enter the full website address — only the team name above.</p>
+            </div>
+          </article>
+          <article class="instruction">
+            <span>05</span>
+            <div>
+              <h3>Sign in with your Angstrom email</h3>
+              <p>Enter your Angstrom email address, then click <strong>Send login code</strong>. You do not need to create a Cloudflare account.</p>
+            </div>
+          </article>
+          <article class="instruction">
+            <span>06</span>
+            <div>
+              <h3>Use the one-time login code</h3>
+              <p>Check your email for a Cloudflare Access message. Copy the one-time code, return to the login page, and finish signing in.</p>
+            </div>
+          </article>
+          <article class="instruction">
+            <span>07</span>
+            <div>
+              <h3>Turn WARP on</h3>
+              <p>After signing in, make sure WARP shows as connected. Once connected, approved internal resources can be reached using their normal internal address.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Important</span>
+          <h2>What to remember</h2>
+        </div>
+        <div class="notice-grid">
+          <div class="notice-card">
+            <h3>No Cloudflare account required</h3>
+            <p>If you see a Cloudflare sign-up page, stop and open the WARP client instead.</p>
+          </div>
+          <div class="notice-card">
+            <h3>Use your Angstrom email</h3>
+            <p>Only approved Angstrom email addresses can receive a login code and connect.</p>
+          </div>
+          <div class="notice-card">
+            <h3>Access is monitored</h3>
+            <p>Remote access is protected, logged, and intended for authorized business use only.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="troubleshooting" class="section">
+      <div class="container faq-layout">
+        <div>
+          <span class="eyebrow">Troubleshooting</span>
+          <h2>Common issues</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>I do not see the Cloudflare icon.</summary>
+            <p>Restart your computer and check the bottom-right corner near the Windows clock. You may need to click the up-arrow to show hidden icons.</p>
+          </details>
+          <details>
+            <summary>It asks me to create a Cloudflare account.</summary>
+            <p>You are on the wrong screen. Open the WARP client, choose Login to Cloudflare Zero Trust, and enter the team name <strong>af-englewood</strong>.</p>
+          </details>
+          <details>
+            <summary>I did not receive a login code.</summary>
+            <p>Check your Junk or Spam folder. The email should come from Cloudflare Access. If it still does not arrive, contact IT support.</p>
+          </details>
+          <details>
+            <summary>My code does not work.</summary>
+            <p>The one-time code may have expired. Request a new login code and try again.</p>
+          </details>
+          <details>
+            <summary>I am connected but cannot reach anything.</summary>
+            <p>Confirm WARP is turned on and connected to the af-englewood team. If it still does not work, contact IT support with the resource you are trying to reach.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark cta-section">
+      <div class="container">
+        <div class="cta-card">
+          <div>
+            <p class="eyebrow eyebrow-light">Need help?</p>
+            <h2>Contact IT Support</h2>
+            <p class="cta-body">Include your name, device, whether WARP shows as connected, and the resource you are trying to reach.</p>
+          </div>
+          <a class="button" href="mailto:itsupport@angstrom-usa.com">Email IT Support</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark brand-mark-sm" aria-hidden="true"></span>
+        <div>
+          <strong>Angstrom Fiber Englewood</strong>
+          <span>A division of Angstrom Fiber Group · Angstrom Automotive Group</span>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="#quick-start">Quick Start</a>
+        <a href="#steps">Instructions</a>
+        <a href="#troubleshooting">Troubleshooting</a>
+      </div>
+      <p class="footer-copy">&copy; 2025 Angstrom Fiber Englewood, LLC</p>
+    </div>
+  </footer>
+
+</body>
+</html>
