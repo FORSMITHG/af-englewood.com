@@ -53,12 +53,11 @@ button, input, textarea { font: inherit; }
 
 /* ─── Logo img ───────────────────────────────────────── */
 .logo-img {
-  width: auto;
-  height: 36px;
-  max-width: 140px;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
   object-fit: contain;
   flex-shrink: 0;
-  display: block;
 }
 
 /* ─── Header ─────────────────────────────────────────── */
