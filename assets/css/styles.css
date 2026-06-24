@@ -640,3 +640,172 @@ details p { padding: 0 22px 20px; color: var(--muted); font-size: .9rem; }
   html { scroll-behavior: auto; }
   .button { transition: none; }
 }
+
+/* ─── Hero with image backdrop ───────────────────────── */
+.hero-img { position: relative; }
+.hero-img-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.hero-img-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: grayscale(40%) brightness(0.35);
+}
+.hero-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    rgba(8,15,30,.92) 0%,
+    rgba(8,15,30,.75) 55%,
+    rgba(8,15,30,.45) 100%
+  );
+}
+.hero-img .hero-bg,
+.hero-img .hero-inner { position: relative; z-index: 1; }
+
+/* ─── OEM trust band ─────────────────────────────────── */
+.oem-band {
+  background: var(--dark-2);
+  border-bottom: 1px solid var(--line-dark);
+  padding: 18px 0;
+}
+.oem-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.oem-label {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(232,228,220,.3);
+  flex-shrink: 0;
+}
+.oem-logos {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.oem-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: rgba(232,228,220,.5);
+  text-transform: uppercase;
+}
+.oem-sep { color: rgba(232,228,220,.18); font-size: .9rem; }
+
+/* ─── Photo strip ────────────────────────────────────── */
+.photo-strip { background: var(--dark); overflow: hidden; }
+.photo-strip-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.photo-strip-item {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+.photo-strip-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%) brightness(0.8);
+  transition: filter .4s ease, transform .5s ease;
+}
+.photo-strip-item:hover img {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.04);
+}
+.photo-strip-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 28px 16px 14px;
+  background: linear-gradient(transparent, rgba(8,15,30,.85));
+  color: rgba(232,228,220,.85);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.photo-strip-cta {
+  padding: 12px 0;
+  text-align: center;
+  background: var(--dark-2);
+  border-top: 1px solid var(--line-dark);
+  font-size: .78rem;
+  color: rgba(232,228,220,.25);
+  display: none; /* hide by default — only show in dev */
+}
+
+/* ─── Full-bleed image section ───────────────────────── */
+.fullbleed-img-section {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+}
+.fullbleed-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  filter: grayscale(30%) brightness(0.45);
+}
+.fullbleed-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(8,15,30,.92) 0%,
+    rgba(8,15,30,.65) 50%,
+    rgba(8,15,30,.2) 100%
+  );
+  display: flex;
+  align-items: center;
+}
+.fullbleed-content {
+  max-width: 560px;
+  color: #e8e4dc;
+}
+.fullbleed-content h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -.02em;
+  margin: 8px 0 18px;
+}
+.fullbleed-content p {
+  color: rgba(232,228,220,.58);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+/* ─── Responsive additions ───────────────────────────── */
+@media (max-width: 900px) {
+  .photo-strip-inner { grid-template-columns: repeat(2, 1fr); }
+  .fullbleed-img-section { height: 420px; }
+  .oem-inner { gap: 16px; }
+}
+@media (max-width: 640px) {
+  .photo-strip-inner { grid-template-columns: repeat(2, 1fr); }
+  .fullbleed-img-section { height: 340px; }
+  .fullbleed-content h2 { font-size: 2rem; }
+  .oem-name { font-size: .95rem; }
+}
